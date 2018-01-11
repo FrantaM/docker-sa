@@ -2,9 +2,7 @@ FROM ubuntu:latest
 
 USER root
 RUN apt-get update && apt-get install -y --no-install-recommends \
-	wget \
-	curl \
-        rsync \
+	wget curl rsync ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
 #
