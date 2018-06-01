@@ -8,5 +8,5 @@ RUN apt-get update -y \
 
 RUN W=/usr/bin/chromium O=$W-o \
 	&& mv $W $O \
-	&& echo -e '#!/bin/bash \n exec -a "$0" "$O" --no-sandbox "$@"' >$W \
+	&& echo -e '#!/bin/bash \n exec -a "$0" "'"$O"'" --no-sandbox "$@"' >$W \
 	&& chmod +x $W
