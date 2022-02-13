@@ -1,8 +1,8 @@
-FROM jenkins/agent
+FROM jenkins/agent:latest-jdk11
 
 USER root
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        rsync \
+        rsync wget \
     && rm -rf /var/lib/apt/lists/*
 
 # https://github.com/KostyaSha/yet-another-docker-plugin/issues/217
