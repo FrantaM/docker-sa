@@ -1,4 +1,4 @@
-FROM frantam/sa-docker-cli:11
+FROM frantam/sa-docker-cli:17
 
 USER root
 
